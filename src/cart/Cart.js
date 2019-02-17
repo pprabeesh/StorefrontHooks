@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import './Cart.css';
+import React from "react";
+import { StyledArrow } from "../assets/common.styles";
+import { StyledFlex, StyledArrowBox, StyledBox } from "./Cart.styles";
 
-class Cart extends Component {
-    render() {
-        return (
-            <div className="Cart">
-                Cart
-            </div>
-        );
-    }
-}
+const Cart = () => (
+  <StyledFlex>
+    <StyledBox>MY CART (0) </StyledBox>
+    <StyledArrowBox>
+      <StyledArrow />
+    </StyledArrowBox>
+  </StyledFlex>
+);
 
 export default Cart;

@@ -3,7 +3,7 @@ import "./Category.css";
 
 class Category extends Component {
   render() {
-    return <div className="Category">Category</div>;
+    return <div className="Category" />;
   }
 }
 
