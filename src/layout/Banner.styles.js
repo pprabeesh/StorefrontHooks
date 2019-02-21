@@ -9,7 +9,6 @@ export const StyledContainer = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 `;
 
 export const StyledBackground = styled.div`
@@ -30,5 +29,17 @@ export const StyledBackground = styled.div`
 `;
 
 export const StyledText = styled.div`
-  padding-top: 12%;
+  padding-top: 15%;
+`;
+
+export const StyledSpan = styled.span`
+  font-family: serif;
+  font-size: 2em;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid white;
+`;
+
+export const StyledP = styled.p`
+  padding: 3%;
+  font-size: 0.9em;
 `;
