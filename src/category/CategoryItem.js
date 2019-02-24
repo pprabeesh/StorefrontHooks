@@ -20,7 +20,7 @@ const CategoryItem = product => {
         <StyledHoverBg>
           <StyledButton
             bcolor="#1d1d20"
-            onClick={() => history.push(`/product/${product.price}`)}
+            onClick={() => history.push(`/product/${product.title}`)}
           >
             VIEW DETAILS
           </StyledButton>
