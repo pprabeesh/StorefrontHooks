@@ -1,13 +1,10 @@
 import React, { Fragment } from "react";
-import Category from "../category/Category";
 import Header from "./Header";
-import Banner from "./Banner";
 
-const Layout = () => (
+const Layout = props => (
   <Fragment>
     <Header />
-    <Banner />
-    <Category />
+    {props.children}
   </Fragment>
 );
 

@@ -51,6 +51,7 @@ export const StyledButton = styled.div`
   margin-top: 10%;
   padding-top: 5%;
   font-size: 0.7em;
+  cursor: pointer;
   ${props =>
     props.bcolor &&
     css`
