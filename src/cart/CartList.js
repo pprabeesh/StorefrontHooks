@@ -4,8 +4,11 @@ import {
   StyledHeader,
   StyledCartContainer,
   StyledSummaryContent,
+  StyledSummaryFooter,
   StyledSummaryRow,
   StyledSummary,
+  StyledHome,
+  StyledButton,
   StyledTable,
   StyledTh,
   Spacer
@@ -19,7 +22,7 @@ const CartList = () => {
     (acc, item) => acc + item.count * item.price,
     0
   );
-
+  const totalAmount = parseFloat(total).toFixed(2);
   return (
     <StyledContainer>
       <StyledHeader>Shopping Cart</StyledHeader>
@@ -45,14 +48,20 @@ const CartList = () => {
             <StyledSummaryRow>CART OVERVIEW</StyledSummaryRow>
             <StyledSummaryRow>
               <div>SUBTOTAL</div>
-              <div>$ {parseFloat(total).toFixed(2)}</div>
+              <div>$ {totalAmount}</div>
             </StyledSummaryRow>
             <StyledSummaryRow>
               <div>TOTAL</div>
-              <div>$ {parseFloat(total).toFixed(2)} CAD</div>
+              <div>$ {totalAmount} CAD</div>
             </StyledSummaryRow>
           </StyledSummaryContent>
         </StyledSummary>
+        <StyledSummaryFooter>
+          <StyledHome>CONTINUE SHOPPING</StyledHome>
+          <StyledButton bcolor="#1d1d20">
+            CHECK OUT (${totalAmount})
+          </StyledButton>
+        </StyledSummaryFooter>
       </StyledCartContainer>
     </StyledContainer>
   );

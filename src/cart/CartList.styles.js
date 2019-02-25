@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Flex } from "grid-styled";
 
 export const StyledContainer = styled.div`
@@ -54,4 +54,36 @@ export const StyledSummaryContent = styled(Flex)`
 export const StyledSummaryRow = styled(Flex)`
   justify-content: space-between;
   padding: 2% 0;
+`;
+
+export const StyledSummaryFooter = styled(Flex)`
+  justify-content: space-between;
+  border-top: 1px solid #f2f2f2;
+  padding: 2% 0;
+`;
+
+export const StyledButton = styled.div`
+  text-align: center;
+  width: 30%;
+  min-height: 30px;
+  max-height: 30px;
+  color: white;
+  padding-top: 15px;
+  font-size: 0.7em;
+  cursor: pointer;
+  ${props =>
+    props.bcolor &&
+    css`
+      background-color: ${props.bcolor};
+    `};
+`;
+
+export const StyledHome = styled.div`
+  font-size: 0.8em;
+  color: #a4a4a4;
+  padding-top: 15px;
+  cursor: pointer;
+  $:hover {
+    text-decoration: underline;
+  }
 `;
