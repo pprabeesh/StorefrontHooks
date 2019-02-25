@@ -58,14 +58,18 @@ export const StyledHR = styled.hr`
 export const StyledAdder = styled(Flex)`
   height: 100%;
   width: 100%;
+  padding-left: 25%;
 `;
 
 export const StyledButton = styled.div`
   text-align: center;
-  width: 60%;
-  height: 15%;
+  min-width: 100px;
+  max-width: 100px;
+  min-height: 32px;
+  max-height: 32px;
   color: white;
   padding-top: 5%;
+  margin-right: 20%
   font-size: 0.7em;
   cursor: pointer;
   ${props =>

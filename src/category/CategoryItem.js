@@ -26,7 +26,7 @@ const CategoryItem = product => {
           </StyledButton>
           <StyledButton
             bcolor="#4A4A4D"
-            onClick={() => dispatch(actions.add(product))}
+            onClick={() => dispatch(actions.add(product, 1))}
           >
             ADD TO CART
           </StyledButton>

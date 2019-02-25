@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   StyledAdder,
   Styledbutton,
@@ -6,15 +6,15 @@ import {
   StyledColFlex
 } from "./AddButton.styles";
 
-const AddButton = () => {
-  const [counter, setCounter] = useState(1);
-
+const AddButton = ({ counter, saveCounter }) => {
   return (
     <StyledFlex>
       <StyledAdder>{counter}</StyledAdder>
       <StyledColFlex>
-        <Styledbutton onClick={() => setCounter(counter + 1)}>+</Styledbutton>
-        <Styledbutton onClick={() => setCounter(counter - 1)}>-</Styledbutton>
+        <Styledbutton onClick={() => saveCounter(counter + 1)}>+</Styledbutton>
+        <Styledbutton onClick={() => (counter ? saveCounter(counter - 1) : 0)}>
+          -
+        </Styledbutton>
       </StyledColFlex>
     </StyledFlex>
   );

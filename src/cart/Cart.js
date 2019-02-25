@@ -8,15 +8,19 @@ import {
 } from "./Cart.styles";
 import { CartContext } from "../Context";
 import { CartPopup } from "./CartPopup";
+import history from "../history";
 
 const Cart = () => {
   const { state } = useContext(CartContext);
 
-  const count = state && state.cartItems && state.cartItems.length;
+  const count =
+    state &&
+    state.cartItems &&
+    state.cartItems.reduce((acc, item) => acc + item.count, 0);
 
   return (
     <Fragment>
-      <StyledDiv>
+      <StyledDiv onClick={() => history.push("/cart")}>
         <StyledFlex>
           <StyledBox>MY CART ({count || "0"})</StyledBox>
           <StyledArrowBox>

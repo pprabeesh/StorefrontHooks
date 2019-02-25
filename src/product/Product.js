@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import products from "../assets/products.json";
 import {
   StyledName,
@@ -16,6 +16,7 @@ import AddButton from "./AddButton";
 import { CartContext } from "../Context";
 
 const Product = props => {
+  const [counter, setCounter] = useState(1);
   const id = props.match.params.id;
   const product = products.find(product => product.title === id);
   const { actions, dispatch } = useContext(CartContext);
@@ -40,10 +41,10 @@ const Product = props => {
           </StyledProductDetail>
           <StyledHR />
           <StyledAdder>
-            <AddButton />
+            <AddButton counter={counter} saveCounter={setCounter} />
             <StyledButton
               bcolor="#4A4A4D"
-              onClick={() => dispatch(actions.add(product))}
+              onClick={() => dispatch(actions.add(product, counter))}
             >
               ADD TO CART
             </StyledButton>

@@ -2,21 +2,24 @@ import styled from "styled-components";
 import { Flex } from "grid-styled";
 
 export const StyledAdder = styled.div`
-  width: 60px;
-  height: 40px;
+  min-width: 60px;
+  max-width: 60px;
+  min-height: 52px;
+  max-height: 52px;
   background-color: #e6e6e6;
-  margin-left: 25%;
   padding-top: 2%;
-  font-size: 1.5em;
+  font-size: 2.5em;
   color: #848484;
+  text-align: center;
 `;
 
 export const Styledbutton = styled.div`
-  height: 20px;
-  width: 23px;
-  margin-left: 0.8%;
-  margin-bottom: 0.8%;
-  width: 6%;
+  min-height: 22px;
+  max-height: 22px;
+  min-width: 23px;
+  max-width: 23px;
+  margin-left: 2px;
+  margin-bottom: 2px;
   padding-top: 4px;
   background-color: #848484;
   color: white;
@@ -24,12 +27,12 @@ export const Styledbutton = styled.div`
 `;
 
 export const StyledFlex = styled(Flex)`
-  width: 100%;
+  width: 30%;
   height: 100%;
 `;
 
 export const StyledColFlex = styled(Flex)`
-  width: 100%;
-  height: 100%;
+  width: 15%;
+  height: 15%;
   flex-direction: column;
 `;
