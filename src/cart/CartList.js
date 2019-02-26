@@ -15,6 +15,7 @@ import {
 } from "./CartList.styles";
 import CartRow from "./CartRow";
 import { CartContext } from "../Context";
+import history from "../history";
 
 const CartList = () => {
   const { state } = useContext(CartContext);
@@ -57,7 +58,9 @@ const CartList = () => {
           </StyledSummaryContent>
         </StyledSummary>
         <StyledSummaryFooter>
-          <StyledHome>CONTINUE SHOPPING</StyledHome>
+          <StyledHome onClick={() => history.push(`/`)}>
+            CONTINUE SHOPPING
+          </StyledHome>
           <StyledButton bcolor="#1d1d20">
             CHECK OUT (${totalAmount})
           </StyledButton>
